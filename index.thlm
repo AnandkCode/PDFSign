@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Signer Tool</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Include PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Signer Tool</h1>
+
+        <!-- PDF Upload -->
+        <div class="upload-container">
+            <label for="pdfUpload">Upload PDF</label>
+            <input type="file" id="pdfUpload" accept="application/pdf">
+        </div>
+
+        <!-- Signature Upload -->
+        <div class="upload-container">
+            <label for="signatureUpload">Upload Signature</label>
+            <input type="file" id="signatureUpload" accept="image/*">
+        </div>
+
+        <!-- Add Signature Button -->
+        <button id="addSignatureBtn" disabled>Add Signature</button>
+
+        <!-- Save Signature Button -->
+        <button id="saveSignatureBtn" disabled>Save Signature</button>
+
+        <!-- Download Signed PDF Button -->
+        <button id="downloadPdfBtn" disabled>Download Signed PDF</button>
+
+        <!-- PDF Preview Area -->
+        <div id="previewArea" class="pdf-preview"></div>
+
+        <!-- Floating Signature (draggable) -->
+        <img id="signatureImage" class="signature-image" style="display: none;">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
